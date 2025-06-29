@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f5f8fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    nav a {
+      position: relative;
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.4s;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background-color: #00b894;
+      transition: width 0.4s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #00b894;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    section:nth-child(odd) {
+      background-color: #f1f1f1;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    .profile-img {
+      display: block;
+      margin: 20px auto;
+      width: 120px;
+      border-radius: 50%;
+    }
+
+    .project,
+    .skill-item {
+      background-color: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .project:hover,
+    .skill-item:hover {
+      transform: scale(1.1);
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .button {
+      background-color: #00b894;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background-color: #019974;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Keshav Kumar</h1>
+    <p>Web Developer | Programmer | Student</p>
+    <nav>
+      <a href="#intro">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="intro">
+    <img src="your-photo.jpeg" alt="Keshav's photo" class="profile-img">
+    <h2>Introduction</h2>
+    <p>Hi there! I'm <strong>Keshav</strong>, a curious and enthusiastic learner diving into the world of web development. I enjoy building clean, creative, and user-friendly websites using HTML, CSS, and JavaScript. Thanks for stopping by my portfolio!</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill-item"><strong>HTML</strong><br>Semantic Structure & Layout</div>
+      <div class="skill-item"><strong>CSS</strong><br>Styling, Flexbox, Grid, Animations</div>
+      <div class="skill-item"><strong>JavaScript</strong><br>Basic Interactivity & DOM</div>
+      <div class="skill-item"><strong>Responsive Design</strong><br>Media Queries & Mobile Layouts</div>
+      <div class="skill-item"><strong>Git & GitHub</strong><br>Version Control</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Personal Portfolio</h3>
+      <p>This project is a responsive portfolio website made with HTML and CSS to showcase my skills and contact information.</p>
+      <a href="#" class="button" target="_blank">View Code</a>
+      <a href="#" class="button" target="_blank">Live Demo</a>
+    </div>
+
+    <div class="project">
+      <h3>Simple Calculator</h3>
+      <p>A basic calculator web app built with HTML, CSS, and JavaScript for simple arithmetic operations.</p>
+      <a href="#" class="button" target="_blank">View Code</a>
+      <a href="#" class="button" target="_blank">Live Demo</a>
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:keshav@example.com">keshav@example.com</a></p>
+    <p><a href="resume.pdf" class="button" download>Download Resume</a></p>
+    <p><button class="button" onclick="window.location.href='mailto:keshav@example.com'">Send Email</button></p>
+    <div class="social-icons">
+      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Keshav. All rights reserved.</p>
+  </footer>
+
+  <button onclick="topFunction()" id="scrollTopBtn" class="button">Top</button>
+  <script>
+    let btn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      btn.style.display = (document.documentElement.scrollTop > 100) ? "block" : "none";
+    };
+    function topFunction() {
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+</body>
+
+</html>
